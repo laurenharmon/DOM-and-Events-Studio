@@ -6,8 +6,8 @@ window.addEventListener("load", function() {
     let popUpResult = window.confirm("Confirm that the shuttle is ready for takeoff.");
         if (popUpResult === true) {
             flightStatus.innerHTML = "Shuttle in flight!";
-            shuttleBackground.style.backgroundColor = "blue";  
-            spaceShuttleHeight.innerHTML = "10,000";
+            shuttleBackground.style.backgroundColor = "blue"; 
+           spaceShuttleHeight.innerHTML = "10000";
         }
 
     let landButton = document.getElementById("landing");
