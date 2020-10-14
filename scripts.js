@@ -3,12 +3,16 @@
 
 window.addEventListener("load", function() {
 
-    let popUpResult = window.confirm("Confirm that the shuttle is ready for takeoff.");
-        if (popUpResult === true) {
+    
+    let takeOffButton = document.getElementById("takeoff");
+        takeOffButton.addEventListener("click", function (event) {
+        let popUpResult = window.confirm("Confirm that the shuttle is ready for takeoff.");
+            if (popUpResult === true) {
             flightStatus.innerHTML = "Shuttle in flight!";
             shuttleBackground.style.backgroundColor = "blue"; 
-           spaceShuttleHeight.innerHTML = "10000";
+            spaceShuttleHeight.innerHTML = "10000";
         }
+    });
 
     let landButton = document.getElementById("landing");
         landButton.addEventListener("click", function (event) {
