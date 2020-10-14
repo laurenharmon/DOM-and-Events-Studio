@@ -17,6 +17,15 @@ window.addEventListener("load", function() {
             shuttleBackground.style.backgroundColor = "green";
             spaceShuttleHeight.innerHTML = "0";
     });
-    
+
+    let abortButton = document.getElementById("missionAbort")
+        abortButton.addEventListener("click", function (event) {
+            let confirmResult = window.confirm("Confirm that you want to abort the mission.");
+                if (confirmResult === true) {
+                    flightStatus.innerHTML = "Mission aborted.";
+                    shuttleBackground.style.backgroundColor = "green";
+                    spaceShuttleHeight.innerHTML = "0";
+                }
+        })
 
 });
