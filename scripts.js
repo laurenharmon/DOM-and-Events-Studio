@@ -32,4 +32,26 @@ window.addEventListener("load", function(event) {
                 }
         })
 
+    let upButton = document.getElementById("upButton");
+    let downButton = document.getElementById("downButton");
+    let rightButton = document.getElementById("rightButton");
+    let leftButton = document.getElementById("leftButton");
+
+    upButton.addEventListener("click", function (event) {
+        rocket.style.marginTop = "-10px";
+        spaceShuttleHeight.innerHTML = parseInt(spaceShuttleHeight.innerHTML) + 10000;
+    })
+
+    downButton.addEventListener("click", function (event) {
+        rocket.style.marginBottom = "-10px";
+        spaceShuttleHeight.innerHTML = parseInt(spaceShuttleHeight.innerHTML) - 10000;
+    })
+
+    rightButton.addEventListener("click", function (event) {
+        rocket.style.marginLeft = "10px";
+    })
+
+    leftButton.addEventListener("click", function (event) {
+        rocket.style.marginLeft = "-10px";
+    })
 });
